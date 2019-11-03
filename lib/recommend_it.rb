@@ -8,8 +8,7 @@ class RecommendIt
     # Get recommendation
     # user => current logged in user
     # data => item purchase count matrix based on users
-    def self.get_user_based_recommendation(user,data,orde
-        r_details)
+    def self.get_user_based_recommendation(user,data,order_details)
         similar_users = Similars.get_similar_users(user,data)
         result = Hash.new
         if similar_users.length > 0
