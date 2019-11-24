@@ -36,15 +36,15 @@ module Similars
         return Math.sqrt(sum).to_f
     end
 
-    # Returns an array of similarity index of users against the logged in user
-    # Sort the similarity indexes in descending order to get like users first
-    def self.get_similar_users(user,data)
+    # Returns an array of similarity indexes
+    # Sort the similarity indexes in descending order
+    def self.get_similars(target,data)
         sim = Hash.new
-        d1 = data[user.id]
+        d1 = data[target.id]
         data.each do |key, d2|
-            if key != user.id
+            if key != target.id
                 index = similarity_index(d1, d2)
-                if index > 0 && !index.nan? # Only store users that have similarity index greater than 0 and is not NaN (NaN values are derived when document vector is filled with only zero values)
+                if index > 0 && !index.nan? # Only store records that have similarity index greater than 0 and is not NaN (NaN values are derived when document vector is filled with only zero values)
                     sim[key] = index
                 end
             end

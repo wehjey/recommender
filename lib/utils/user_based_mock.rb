@@ -1,4 +1,4 @@
-module Mock
+module UserBasedMock
     # Mock data to use for testing purposes
 
     # Returns document vector of valid length

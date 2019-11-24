@@ -10,7 +10,7 @@ class UserBasedRecommendation
         user = context.item
         data = context.data
         order_details = context.order_details
-        similar_users = Similars.get_similar_users(user,data)
+        similar_users = Similars.get_similars(user,data)
         result = Hash.new
         if similar_users.length > 0
             user_menus = Array.new
@@ -30,7 +30,6 @@ class UserBasedRecommendation
 
     # Returns all similars menu items
     def get_similars_menus(similar_users,order_details)
-        number_of_users = similar_users.length
         similars_menus = Array.new
         similar_users.each do |user_id, sim_index|
             get_all_similar_users_menu_items(order_details,user_id,similars_menus)
