@@ -1,6 +1,7 @@
 require 'utils/similars'
+require 'recommender'
 
-class UserBasedRecommendation
+class UserBasedRecommendation < Recommender
     include Similars
 
     # Get recommendation

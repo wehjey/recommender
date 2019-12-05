@@ -1,5 +1,6 @@
 require 'utils/similars'
-class ItemBasedRecommendation
+require 'recommender'
+class ItemBasedRecommendation < Recommender
     include Similars
 
     # Get recommendation for item

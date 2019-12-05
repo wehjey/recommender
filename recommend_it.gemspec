@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
     s.name = "recommend_it"
-    s.version = "1.0.0"
+    s.version = "1.0.1"
     s.date = "2019-11-01"
     s.summary = "Meal recommedation engine based on collaborative filtering"
     s.description = "Meal recommedation engine based on collaborative filtering"
