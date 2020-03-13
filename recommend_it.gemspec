@@ -1,14 +1,12 @@
 Gem::Specification.new do |s|
     s.name = "recommend_it"
-    s.version = "1.0.2"
+    s.version = "1.0.1"
     s.date = "2019-11-01"
-    s.summary = "Recommends meals to users"
-    s.description = "Recommends meals from restaurants to users based on their budget, time of the day, meal type(vegan, non-vegan and vegetarian) and previous orders"
-    s.files = [
-      "lib/recommend_it.rb"
-    ]
+    s.summary = "Meal recommedation engine based on collaborative filtering"
+    s.description = "Meal recommedation engine based on collaborative filtering"
+    s.files = Dir['lib/**/*.rb']
     s.require_paths = ["lib"]
     s.authors = ["Weje Emmanuel Okechukwu"]
-    s.email = 'wejemm@yahoo..com'
+    s.email = 'wejemm@yahoo.com'
     s.homepage = 'http://rubygems.org/gems/recommend_it'
   end
